@@ -21,10 +21,10 @@ body {
 }
 
 .main-content h1 {
-    font-size: 1.25rem; /* Footer ile aynı yazı boyutunu ayarladık */
+    font-size: 1.25rem;
     text-align: center;
-    color: #ffffff; /* Yazı rengi, ihtiyaca göre değiştirilebilir */
-    margin-bottom: 2rem; /* Başlık ile altındaki içerik arasına boşluk bırakır */
+    color: #ffffff;
+    margin-bottom: 2rem;
     text-shadow: 0 0 1.5px #8CFFFA, 0 0 1.5px #8CFFFA;
 }
 
@@ -74,9 +74,9 @@ body {
     text-align: center;
     background-color: transparent;
     padding: 1rem;
-    color: #ffffff; /* Yazı rengi */
-    font-size: 1rem; /* Yazı boyutu */
-    margin-top: -1rem; /* Footer ile üst içerik arasında boşluk bırakır */
+    color: #ffffff; 
+    font-size: 1rem;
+    margin-top: -1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -87,12 +87,12 @@ body {
 }
 
 .footer-link {
-    color: #ffffff; /* Bağlantı rengi */
-    text-decoration: none; /* Bağlantı altı çizgisi yok */
+    color: #ffffff;
+    text-decoration: none; /* There is no under-connect line. */
 }
 
 .footer-link:hover {
-    text-decoration: underline; /* Üzerine gelindiğinde altını çizer */
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
