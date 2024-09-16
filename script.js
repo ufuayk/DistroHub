@@ -58,6 +58,9 @@ distributions.forEach((distro, index) => {
                             <i class="fas fa-globe"></i>
                         </a>
                     ` : ''}
+                    <button class="btn btn-link position-absolute top-0 start-0 link-icon" style="padding: 0.375rem 0.75rem;" onclick="navigator.clipboard.writeText('${distro.downloadLink}')">
+                        <i class="fas fa-link"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -82,23 +85,53 @@ style.textContent = `
     .globe-icon:hover {
         color: #4FD2D7;
     }
+    .link-icon {
+        color: #FFFF;
+        transition: color 0.3s ease;
+    }
+    .link-icon:hover {
+        color: #4FD2D7;
+    }
 `;
 document.head.appendChild(style);
 
 particlesJS('particles-js', {
     particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#8CFFFA" },
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: ["#ffffff", "#ffff00", "#87cefa", "#4FD2D7"] },
         shape: { type: "circle" },
-        opacity: { value: 0.5, random: false },
+        opacity: { value: 0.8, random: true },
         size: { value: 3, random: true },
-        line_linked: { enable: true, distance: 150, color: "#8CFFFA", opacity: 0.4, width: 1 },
-        move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+        line_linked: { enable: false },
+        move: { enable: true, speed: 0.2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false }
     },
     interactivity: {
         detect_on: "canvas",
-        events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-        modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+        events: { onhover: { enable: true, mode: "bubble" }, onclick: { enable: true, mode: "repulse" }, resize: true },
+        modes: { bubble: { distance: 250, size: 0, duration: 2, opacity: 0, speed: 3 }, repulse: { distance: 400, duration: 0.4 } }
     },
     retina_detect: true
 });
+
+/*
+
+Winter vacation theme. It might need a little update. Shh.
+
+particlesJS('particles-js', {
+    particles: {
+        number: { value: 400, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.7, random: false },
+        size: { value: 3, random: true },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 1, direction: "bottom", random: false, straight: false, out_mode: "out", bounce: false }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: false }, onclick: { enable: false }, resize: true },
+    },
+    retina_detect: true
+});
+
+*/
