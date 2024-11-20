@@ -95,6 +95,8 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+/*
+
 particlesJS('particles-js', {
     particles: {
         number: { value: 100, density: { enable: true, value_area: 800 } },
@@ -113,7 +115,7 @@ particlesJS('particles-js', {
     retina_detect: true
 });
 
-/*
+*/
 
 Winter vacation theme. It might need a little update. Shh.
 
@@ -133,5 +135,3 @@ particlesJS('particles-js', {
     },
     retina_detect: true
 });
-
-*/
