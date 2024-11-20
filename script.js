@@ -117,8 +117,6 @@ particlesJS('particles-js', {
 
 */
 
-Winter vacation theme. It might need a little update. Shh.
-
 particlesJS('particles-js', {
     particles: {
         number: { value: 400, density: { enable: true, value_area: 800 } },
