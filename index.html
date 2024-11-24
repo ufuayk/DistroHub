@@ -3,37 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DistroHub - GNU/Linux</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>DistroHub - Download Linux Distributions</title>
+    <meta name="description" content="DistroHub: Download Linux distributions from a single source. Find and compare popular Linux distros like Ubuntu, Fedora, Arch Linux, and more.">
+    <meta name="keywords" content="Linux, Linux distributions, DistroHub, Ubuntu, Fedora, Debian, Arch Linux, Linux Mint, download linux, linux distro, js, linux download, distro download, free linux">
+    <meta name="author" content="Ufuayk">
+    <link rel="canonical" href="https://ufuayk.github.io/DistroHub/">
+    <meta property="og:title" content="DistroHub - Your Linux Distribution Hub">
+    <meta property="og:description" content="Find, compare, and download Linux distributions. Your one-stop destination for Linux OS downloads.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#8CFFFA">
+    <meta name="robots" content="index, follow">
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/fa.all.min.css">
+    <link rel="stylesheet" href="lib/animate.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/icon.ico">
-    <link rel="canonical" href="https://ufuayk.github.io/DistroHub/">
-    <meta name="description" content="DistroHub: Download *all* Linux distributions from a single source with a single click.">
-    <meta name="keywords" content="Linux, Linux distributions, DistroHub, Ubuntu, Fedora, Solus, Arch, distro, download, linux distro">
-    <meta property="og:title" content="DistroHub: Explore and Download Linux Distributions">
-    <meta property="og:description" content="Discover and compare various Linux distributions on DistroHub.">
-    <meta name="theme-color" content="#4FD2D7">
-    <meta name="rating" content="General">
-    <meta name="subject" content="Linux distributions and their download links.">
 </head>
 <body class="bg-dark text-light">
+    
     <div id="particles-js"></div>
+    
     <main class="container main-content">
-        <h1 class="text-center subtle-glow animate__animated animate__fadeIn">Welcome to <strong>DistroHub</strong>. Choose and download the distribution you want! Please read the <a href="https://github.com/ufuayk/DistroHub?tab=readme-ov-file#%EF%B8%8F-legal-disclaimer" style="font-weight: bold; text-decoration: none; color: inherit;" target="_blank" rel="noopener noreferrer">disclaimer</a> before downloading.</h1>
-        <div class="row" id="distroList">
-        </div>
+        <h1 class="text-center subtle-glow animate__animated animate__fadeIn">
+            Welcome to <strong class="text-gradient">DistroHub</strong>
+            <div class="subtitle">Choose and download your next Linux distribution!</div>
+        </h1>
+
+        <div class="row" id="distroList"></div>
     </main>
-    <a href="#" class="btn btn-primary scroll-to-top">
+
+    <footer class="text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">Made with <a href="https://www.gnu.org/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light"><i class="fas fa-heart"></i></a> by <a href="https://github.com/ufuayk" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light">@ufuayk</a>. | Please <a href="https://github.com/ufuayk/DistroHub?tab=readme-ov-file#%EF%B8%8F-legal-disclaimer" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer">read the disclaimer</a> before downloading.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="btn btn-primary scroll-to-top" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </a>
-    <a href="https://github.com/ufuayk" target="_blank" class="btn btn-primary github-button">
-        <i class="fa-brands fa-github"></i>
-    </a>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/gsap.min.js"></script>
+    <script src="lib/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
