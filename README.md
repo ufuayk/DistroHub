@@ -4,6 +4,8 @@ DistroHub is a hobby project designed to streamline the process of downloading L
 
 • **Website:** *https://ufuayk.github.io/DistroHub*
 
+<a href="https://www.producthunt.com/posts/distrohub?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-distrohub" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=645884&theme=dark" alt="DistroHub - Download&#0032;hub&#0032;for&#0032;ISOs&#0032;of&#0032;Linux&#0032;distributions&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 ![Screenshot](https://raw.githubusercontent.com/ufuayk/DistroHub/refs/heads/main/img/screenshot.png)
 
 ## ⚙️ Features
