@@ -6,6 +6,10 @@ body {
     color: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #particles-js {
     position: fixed;
     width: 100%;
@@ -16,12 +20,13 @@ body {
 }
 
 .main-content {
-    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
     user-select: none;
 }
 
 .main-content h1 {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
     text-align: center;
     color: #ffffff;
     margin-bottom: 3rem;
@@ -39,7 +44,6 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(140, 255, 250, 0.4);
 }
 
@@ -144,13 +148,72 @@ body {
     margin-top: 0.5rem;
 }
 
+.github-link {
+    font-size: 2.75rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #8CFFFA;
+    text-decoration: none;
+}
+
+.github-link i {
+    margin-right: 10px;
+}
+
 footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: rgba(30, 30, 30, 0.8);
     backdrop-filter: blur(10px);
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
-    font-size: 20px;
-    user-select: none; 
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    font-size: 15px;
+    user-select: none;
+    padding: 8px 20px;
+    width: auto;
+    max-width: 90%;
+    z-index: 1000;
+}
 
+.close-button {
+    position: absolute;
+    top: -15px;
+    right: -28px;
+    background: rgba(30, 30, 30, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.close-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+footer .container {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    white-space: nowrap;
 }
 
 footer a:hover {
@@ -158,11 +221,39 @@ footer a:hover {
     transition: all 1s;
 }
 
-@media (max-width: 768px) {
-    .main-content {
-        padding-top: 1rem;
-    }
+.search-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 0px;
+}
 
+.search-container .input-group {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-container input {
+    border: none;
+    box-shadow: none !important;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.search-container .input-group-text {
+    border: none;
+    border-left: 1px solid #8CFFFA;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
     .main-content h1 {
         font-size: 1.4rem;
         padding: 0 1rem;
@@ -170,6 +261,10 @@ footer a:hover {
 
     .card-img-top {
         height: 120px;
+    }
+
+    .github-link {
+        font-size: 1.4rem;
     }
 }
 

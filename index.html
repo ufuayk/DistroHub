@@ -7,7 +7,7 @@
     <meta name="description" content="DistroHub: Download Linux distributions from a single source. Find and compare popular Linux distros like Ubuntu, Fedora, Arch Linux, and more.">
     <meta name="keywords" content="Linux, Linux distributions, DistroHub, Ubuntu, Fedora, Debian, Arch Linux, Linux Mint, download linux, linux distro, js, linux download, distro download, free linux">
     <meta name="author" content="Ufuayk">
-    <link rel="canonical" href="distributionhub.github.io">
+    <link rel="canonical" href="https://distributionhub.github.io/">
     <meta property="og:title" content="DistroHub - Your Linux Distribution Hub">
     <meta property="og:description" content="Find, compare, and download Linux distributions. Your one-stop destination for Linux OS downloads.">
     <meta property="og:type" content="website">
@@ -25,17 +25,28 @@
     <div id="particles-js"></div>
     
     <main class="container main-content">
-        <h1 class="text-center subtle-glow animate__animated animate__fadeIn">
-            Welcome to <strong class="text-gradient">DistroHub</strong>
-            <div class="subtitle">Choose and download your next Linux distribution!</div>
-        </h1>
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 class="text-start subtle-glow animate__animated animate__fadeIn mb-3">
+                Welcome to <strong class="text-gradient">DistroHub</strong>
+            </h1>
+            <a href="https://github.com/DistributionHub/distributionhub.github.io" target="_blank" rel="noopener noreferrer" class="github-link subtle-glow animate__animated animate__fadeIn mb-3">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+        <div class="search-container mb-4 animate__animated animate__fadeIn">
+            <div class="input-group">
+                <input type="text" id="distroSearch" class="form-control bg-dark text-light" placeholder="Search distributions or details.." aria-label="Search distributions">
+            </div>
+        </div>
 
         <div class="row" id="distroList"></div>
     </main>
 
-    <footer class="text-center py-4 mt-5">
+    <footer id="disclaimer-footer">
         <div class="container">
-            <p class="mb-0">Made with <a href="https://www.gnu.org/" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light"><i class="fas fa-heart"></i></a> by <a href="https://github.com/ufuayk" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-light">@ufuayk</a>. | Please <a href="https://github.com/DistributionHub/distributionhub.github.io?tab=readme-ov-file#%EF%B8%8F-legal-disclaimer" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer">read the disclaimer</a> before downloading.</p>
+            <button class="close-button" aria-label="Close disclaimer"><i class="fas fa-times"></i></button>
+            <p>Please <a href="https://github.com/DistributionHub/distributionhub.github.io?tab=readme-ov-file#%EF%B8%8F-legal-disclaimer" class="text-decoration-none text-light" target="_blank" rel="noopener noreferrer">read the disclaimer</a> before downloading.</p>
         </div>
     </footer>
 

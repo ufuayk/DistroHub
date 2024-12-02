@@ -1,7 +1,7 @@
 const distributions = [
     { name: "Ubuntu", version: "24.04.1 LTS (Noble Numbat) x86_64", icon: "img/distro/ubuntu.png", downloadLink: "https://releases.ubuntu.com/noble/ubuntu-24.04.1-desktop-amd64.iso", description: "User-friendly and popular Linux distribution.", websiteLink: "https://ubuntu.com/"},
     { name: "Fedora", version: "Workstation 41 x86_64", icon: "img/distro/fedora.svg", downloadLink: "https://download.fedoraproject.org/pub/fedora/linux/releases/41/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-41-1.4.iso", description: "Cutting-edge distribution with latest technology.", websiteLink: "https://fedoraproject.org/"},
-    { name: "Debian", version: "Netinst 12.6 x86_64", icon: "img/distro/debian.svg", downloadLink: "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.6.0-amd64-netinst.iso", description: "Known for its stability and security.", websiteLink: "https://www.debian.org/"},
+    { name: "Debian", version: "Netinst 12.8 x86_64", icon: "img/distro/debian.svg", downloadLink: "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso", description: "Known for its stability and security.", websiteLink: "https://www.debian.org/"},
     { name: "Arch Linux", version: "2024.11.01 x86_64", icon: "img/distro/arch.svg", downloadLink: "https://mirror.sunred.org/archlinux/iso/2024.11.01/archlinux-2024.11.01-x86_64.iso", description: "Minimalist and highly customizable distribution.", websiteLink: "https://archlinux.org/"},
     { name: "Linux Mint", version: "22 (Wilma) x86_64", icon: "img/distro/mint.svg", downloadLink: "https://mirrors.layeronline.com/linuxmint/stable/22/linuxmint-22-cinnamon-64bit.iso", description: "Ubuntu-based, user-friendly distribution.", websiteLink: "https://linuxmint.com/"},
     { name: "Manjaro", version: "24.1.0 x86_64", icon: "img/distro/manjaro.svg", downloadLink: "https://download.manjaro.org/kde/24.1.0/manjaro-kde-24.1.0-241001-linux610.iso", description: "User-friendly Arch Linux-based distribution.", websiteLink: "https://manjaro.org/"},
@@ -10,7 +10,7 @@ const distributions = [
     { name: "Zorin OS", version: "17.2 Core x86_64", icon: "img/distro/zorin.svg", downloadLink: "https://zorin.mirrors.itworxx.de/17/Zorin-OS-17.2-Core-64-bit.iso", description: "Easy transition from Windows to Linux.", websiteLink: "https://zorin.com/os/"},
     { name: "Rocky Linux", version: "DVD 9.5 x86_64", icon: "img/distro/rocky.svg", downloadLink: "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.5-x86_64-dvd.iso", description: "RHEL-compatible Linux distribution.", websiteLink: "https://rockylinux.org/"},
     { name: "openSUSE", version: "Netinst Leap 15.6 x86_64", icon: "img/distro/suse.png", downloadLink: "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-NET-x86_64-Media.iso", description: "Versatile Linux with robust community support.", websiteLink: "https://www.opensuse.org/"},
-    { name: "Elementary OS", version: "8 x86_64", icon: "img/distro/elementary.png", downloadLink: "https://sgp1.dl.elementary.io/download/MTczMjk3ODE5MQ==/elementaryos-8.0-stable.20241122rc.iso", description: "Beautiful and user-friendly, macOS-like interface.", websiteLink: "https://elementary.io/"},
+    { name: "Elementary OS", version: "7.1 x86_64", icon: "img/distro/elementary.png", downloadLink: "https://sgp1.dl.elementary.io/download/MTcyNDMyNDU1Ng==/elementaryos-7.1-stable.20230926rc.iso", description: "Beautiful and user-friendly, macOS-like interface.", websiteLink: "https://elementary.io/"},
     { name: "Garuda Linux", version: "240428 x86_64", icon: "img/distro/garuda.svg", downloadLink: "https://iso.builds.garudalinux.org/iso/latest/garuda/gnome/latest.iso?r2=1", description: "High-performance Arch-based distribution.", websiteLink: "https://garudalinux.org/"},
     { name: "Kali Linux", version: "2024.3 x86_64", icon: "img/distro/kali.svg", downloadLink: "https://cdimage.kali.org/kali-2024.3/kali-linux-2024.3-installer-amd64.iso", description: "Powerful toolkit for ethical hacking and security.", websiteLink: "https://www.kali.org/"},
     { name: "Pardus", version: "23.2 x86_64", icon: "img/distro/pardus.png", downloadLink: "https://indir.pardus.org.tr/ISO/Pardus23/Pardus-23.2-GNOME-amd64.iso", description: "Turkish-based, user-friendly Linux distribution.", websiteLink: "https://pardus.org.tr/"},
@@ -76,7 +76,7 @@ loadingAnimation.from('h1', {
     ease: 'power3.out'
 });
 
-distributions.forEach((distro, index) => {
+function createDistroCard(distro, animate = true) {
     const card = document.createElement('div');
     card.className = 'col-md-4 mb-4';
     card.innerHTML = `
@@ -100,13 +100,81 @@ distributions.forEach((distro, index) => {
     `;
     distroList.appendChild(card);
 
-    gsap.from(card, {
-        duration: 0.8,
-        opacity: 0,
-        y: 50,
-        delay: index * 0.1,
-        ease: "power3.out"
-    });
+    if (animate) {
+        gsap.from(card, {
+            duration: 0.8,
+            opacity: 0,
+            y: 50,
+            ease: "power3.out"
+        });
+    }
+}
+
+distributions.forEach((distro) => createDistroCard(distro, true));
+
+const disclaimerFooter = document.getElementById('disclaimer-footer');
+const closeButton = document.querySelector('.close-button');
+const searchContainer = document.querySelector('.search-container');
+const githubLink = document.querySelector('.github-link');
+
+gsap.from(searchContainer, {
+    duration: 0.8,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out"
+});
+
+gsap.from(githubLink, {
+    duration: 0.8,
+    opacity: 0,
+    y: 50,
+    ease: "power3.out"
+});
+
+if (localStorage.getItem('disclaimerClosed') === 'true') {
+    disclaimerFooter.style.display = 'none';
+}
+
+closeButton.addEventListener('click', () => {
+    disclaimerFooter.style.display = 'none';
+    localStorage.setItem('disclaimerClosed', 'true');
+});
+
+const searchInput = document.getElementById('distroSearch');
+
+function filterDistributions(searchTerm) {
+    const term = searchTerm.toLowerCase();
+    const footer = document.querySelector('footer');
+    
+    if (term.length > 0) {
+        footer.style.display = 'none';
+    } else {
+        footer.style.display = 'block';
+    }
+
+    const filteredDistros = distributions.filter(distro => 
+        distro.name.toLowerCase().includes(term) ||
+        distro.description.toLowerCase().includes(term) ||
+        distro.version.toLowerCase().includes(term)
+    );
+    
+    const distroList = document.getElementById('distroList');
+    distroList.innerHTML = '';
+    
+    if (filteredDistros.length === 0) {
+        distroList.innerHTML = `
+            <div class="col-12 text-center mt-4">
+                <p class="text-muted">No distributions found matching "${searchTerm}"</p>
+            </div>
+        `;
+        return;
+    }
+    
+    filteredDistros.forEach(distro => createDistroCard(distro, false));
+}
+
+searchInput.addEventListener('input', (e) => {
+    filterDistributions(e.target.value);
 });
 
 function copyToClipboard(text) {
