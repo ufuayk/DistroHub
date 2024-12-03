@@ -1,4 +1,4 @@
-# 🐧 DistroHub | Choose and download your next Linux distribution!
+# 🐧 DistroHub
 
 DistroHub is a hobby project designed to streamline the process of downloading Linux distributions. With DistroHub, you can quickly and easily download the latest desktop versions of various Linux distributions with a single click—no need to navigate through multiple pages. It’s perfect for users who want to save time and effort when looking for their next Linux OS.
 
